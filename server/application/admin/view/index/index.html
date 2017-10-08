@@ -4,7 +4,7 @@
 <div class="wrapper wrapper-content">
     <div class="alert alert-danger alert-dismissable">
         <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-        <div>尊敬的会员<span id="weather"></span></div>
+        <div id="msg_div">告警：<span id="alert_msg"></span></div>
     </div>
 
     <!-- 上方tab -->
@@ -18,7 +18,7 @@
                     <h5>会员</h5>
                 </div>
                 <div class="ibox-content">
-                    <h1 class="no-margins">{$member}</h1>
+                    <h1 class="no-margins">0</h1>
                     <small>今日新增</small>
                 </div>
             </div>
@@ -71,54 +71,10 @@
         </div>
     </div>
 
-    <!-- 中间折线 -->
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="col-sm-6">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <i class="fa fa-cogs"></i> 系统信息
-                    </div>
-                    <div class="panel-body">
-                        <p><i class="fa fa-sitemap"></i> 框架版本：ThinkPHP{$info.think_v}
-                        </p>
-                        <p><i class="fa fa-windows"></i> 服务环境：{$info.web_server}
-                        </p>
-                        <p><i class="fa fa-warning"></i> 上传附件限制：{$info.onload}
-                        </p>
-                        <p><i class="fa fa-credit-card"></i> PHP 版本：{$info.phpversion}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <i class="fa fa-cogs"></i> 系统信息
-                    </div>
-                    <div class="panel-body">
-                        <p><i class="fa fa-send-o"></i> 官方网站：<a href="http://zcloud.link" target="_blank">http://zcloud.link</a>
-                        </p>
-                        <p><i class="fa fa-qq"></i> QQ：<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=82008951&amp;site=qq&amp;menu=yes" target="_blank">82008951</a>
-                        </p>
-                        <p><i class="fa fa-weixin"></i> 微信：<a href="javascript:;">贴二维码</a>
-                        </p>
-                        <p><i class="fa fa-credit-card"></i> 支付宝：<a href="javascript:;" class="支付宝信息">贴二维码</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </div>
 
 {include file="public/footer" /}
-<script src="/static/admin/js/jquery.leoweather.min.js"></script>
-
-<script type="text/javascript">
-    $('#weather').leoweather({format:'，{时段}好！<span id="colock">现在时间是：<strong>{年}年{月}月{日}日 星期{周} {时}:{分}:{秒}</strong>，</span> <b>{城市}天气</b> {天气} {夜间气温}℃ ~ {白天气温}℃'});
-</script>
 
 </body>
 </html>

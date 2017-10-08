@@ -10,8 +10,6 @@ class User extends Base
 
     /**
      * [index 用户列表]
-     * @return [type] [description]
-     * @author [田建龙] [864491238@qq.com]
      */
     public function index(){
 
@@ -44,8 +42,6 @@ class User extends Base
 
     /**
      * [userAdd 添加用户]
-     * @return [type] [description]
-     * @author [田建龙] [864491238@qq.com]
      */
     public function userAdd()
     {
@@ -71,8 +67,6 @@ class User extends Base
 
     /**
      * [userEdit 编辑用户]
-     * @return [type] [description]
-     * @author [田建龙] [864491238@qq.com]
      */
     public function userEdit()
     {
@@ -103,8 +97,6 @@ class User extends Base
 
     /**
      * [UserDel 删除用户]
-     * @return [type] [description]
-     * @author [田建龙] [864491238@qq.com]
      */
     public function UserDel()
     {
@@ -118,8 +110,6 @@ class User extends Base
 
     /**
      * [user_state 用户状态]
-     * @return [type] [description]
-     * @author [田建龙] [864491238@qq.com]
      */
     public function user_state()
     {

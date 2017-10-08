@@ -22,9 +22,23 @@ class Index extends Base
         //今日新增会员
         $today = strtotime(date('Y-m-d 00:00:00'));//今天开始日期     
         $map['create_time'] = array('egt', $today);
-        $member = Db::name('member')->where($map)->count();
-        $this->assign('member', $member);
 
+        return $this->fetch('index');
+    }
+
+    /**
+     * GIS实时监控页面
+     */
+    public function gisPage()
+    {
+        return $this->fetch('gisPage');
+    }
+
+    /**
+     * sysinfo 页面
+     */
+    public function sysinfo()
+    {
         //服务器后台信息
         $info = array(
             'web_server' => $_SERVER['SERVER_SOFTWARE'],
@@ -34,10 +48,8 @@ class Index extends Base
         );
 
         $this->assign('info',$info);
-        return $this->fetch('index');
+        return $this->fetch('sysinfoPage');
     }
-
-
 
     /**
      * [userEdit 修改密码]
